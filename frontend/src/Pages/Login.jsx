@@ -69,7 +69,7 @@ function Login() {
         const hideLoading = message.loading("Verifying credentials...", 0);
 
         try {
-            const response = await axios.post('http://localhost:8080/user/login', { email, password },{withCredentials:true});
+            const response = await axios.post('https://amazonclone-20qm.onrender.com/user/login', { email, password },{withCredentials:true});
 
             if (response.status === 200) {
                 // 1. Save the access token specifically for the user role
