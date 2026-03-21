@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 1. Create an instance
 const api = axios.create({
-    baseURL: 'http://localhost:8080',
+    baseURL: 'https://amazonclone-20qm.onrender.com',
     withCredentials:true
      // Crucial for sending the Refresh Token Cookie
 });
@@ -38,7 +38,7 @@ api.interceptors.response.use(
             try {
                 // Call your refresh endpoint
                 // Note: Use a standard axios call here, NOT the 'api' instance
-                const res = await axios.post('http://localhost:8080/admin/createrefreshtoken',{},{withCredentials:true});
+                const res = await axios.post('https://amazonclone-20qm.onrender.com/admin/createrefreshtoken',{},{withCredentials:true});
 
                 if (res.status === 200) {
                     const { accessToken } = res.data;
