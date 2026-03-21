@@ -18,7 +18,7 @@ const handlelogin = async (e) => {
 
   try {
     // Axios handles JSON.stringify and Content-Type header automatically
-    const response = await axios.post('http://localhost:8080/admin/login', loginData, { withCredentials: true });
+    const response = await axios.post('https://amazonclone-20qm.onrender.com/admin/login', loginData, { withCredentials: true });
       // This is the Axios equivalent of credentials: 'include);
 setname('')
 setpassword('')
