@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 1. Create the User-specific instance
 const userApi = axios.create({
-    baseURL: 'http://localhost:8080/sshopping', // Points to your user shopping routes
+    baseURL: 'https://amazonclone-20qm.onrender.com/sshopping', // Points to your user shopping routes
     withCredentials: true,
 });
 
@@ -35,7 +35,7 @@ userApi.interceptors.response.use(
                 // Call the USER specific refresh endpoint
                 // Note: This hits the /user prefix as defined in your server.js
                 const res = await axios.post(
-                    'http://localhost:8080/sshopping/getnewtoken', 
+                    'https://amazonclone-20qm.onrender.com/sshopping/getnewtoken', 
                     {}, 
                     { withCredentials: true }
                 );
