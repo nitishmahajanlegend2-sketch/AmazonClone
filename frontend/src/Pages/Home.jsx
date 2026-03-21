@@ -20,7 +20,7 @@ const Home=({cartlist,setcartlist,cartnumber,setcartnumber})=>{
     
     useEffect(()=>{
         const getallproducts=async()=>{
-        const res=await axios.get('http://localhost:8080/nshopping/getproducts')
+        const res=await axios.get('https://amazonclone-20qm.onrender.com/nshopping/getproducts')
         console.log(res)
         console.log("This is the reoducts",res.data)
         setproducts(res.data)
