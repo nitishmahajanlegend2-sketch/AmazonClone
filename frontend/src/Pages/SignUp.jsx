@@ -47,7 +47,7 @@ function SignUp() {
         e.preventDefault(); // Prevents page reload
         
         try {
-            const response = await axios.post('http://localhost:8080/user/register', {
+            const response = await axios.post('https://amazonclone-20qm.onrender.com/user/register', {
                 fullName,
                 email,
                 password
