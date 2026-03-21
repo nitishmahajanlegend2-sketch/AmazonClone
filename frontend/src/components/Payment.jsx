@@ -59,7 +59,7 @@ console.log(order)
       key: "rzp_test_SSHejQAeE0aGXH", // Enter your Key ID here
       amount: order.data.amount,
       currency: order.data.currency,
-      name: "Acme Corp",
+      name: "Nitish Mahajan Corp",
       
       
       order_id: order.data.id,
