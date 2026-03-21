@@ -17,7 +17,7 @@ const handleDeleteProduct = async (productId) => {
         const token = localStorage.getItem('accessToken');
 
         // Note: For DELETE requests with a body, Axios requires this specific structure:
-        const response = await api.post('http://localhost:8080/admin/deleteproduct',{data: {
+        const response = await api.post('https://amazonclone-20qm.onrender.com/admin/deleteproduct',{data: {
                 _id: productId // This matches the const {_id} = req.body in your controller
             }
         });
@@ -40,7 +40,7 @@ const handleDeleteProduct = async (productId) => {
         const token = localStorage.getItem('accessToken');
 
         // 2. Make the request with the Authorization header
-        const response = await axios.get('http://localhost:8080/admin/getproducts', {
+        const response = await axios.get('https://amazonclone-20qm.onrender.com/admin/getproducts', {
           headers: {
             authorization: `Bearer ${token}` // Matches your .split(' ')[1] logic
           },credentials: 'include'
