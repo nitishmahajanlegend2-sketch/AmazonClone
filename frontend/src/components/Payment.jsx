@@ -85,7 +85,10 @@ console.log(order)
                 navigate('/myorders');
             }
         } catch (error) {
+            
             alert("Error placing  order.");
+            console.log(error.response?.status)      // e.g. 403, 401, 500
+    console.log(error.response?.data) 
         }
         message.success(`Payment Success! ID: ${response.razorpay_payment_id}`);
 
