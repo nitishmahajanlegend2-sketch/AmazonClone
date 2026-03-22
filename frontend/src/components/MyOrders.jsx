@@ -95,6 +95,7 @@ const MyOrders = () => {
         <div style={styles.container}>
             <div style={styles.header}>
                 <h1 style={{ fontSize: '28px', fontWeight: '500' }}>Your Orders</h1>
+                <h1 style={{ fontSize: '28px', fontWeight: '500' }} ><a href="/">Back to home</a></h1>
             </div>
 
             {orders.length === 0 ? (
