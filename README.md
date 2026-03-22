@@ -62,12 +62,13 @@ npm install
 # For Frontend
 cd client
 npm install
+
+# Start Server
 Create a .env file in the root directory of the server and add:
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 RAZORPAY_KEY_ID=your_key_id
 RAZORPAY_KEY_SECRET=your_key_secret
-# Start Server
 npm start
 
 # Start Client
