@@ -187,7 +187,7 @@ const Navbar = ({cartnumber}) => {
                     <span style={styles.optionLineTwo}>Account & Lists</span>
                 </div>
 
-                <div style={styles.option} onClick={() => navigate('/orders')}>
+                <div style={styles.option} onClick={() => navigate('/myorders')}>
                     <span style={styles.optionLineOne}>Returns</span>
                     <span style={styles.optionLineTwo}>& Orders</span>
                 </div>
