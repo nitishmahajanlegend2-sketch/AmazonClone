@@ -91,7 +91,7 @@ const loginController = async (req, res) => {
         const accessTokenuser = jwt.sign(
             { id: user._id },
             process.env.ACCESS_SECRET2,
-            { expiresIn: '1m' }
+            { expiresIn: '15m' }
         );
 
         // 3. Create Refresh Token (Long-lived: 7 days)
@@ -105,8 +105,8 @@ const loginController = async (req, res) => {
         // 4. Store Refresh Token in an HTTP-only Cookie
         res.cookie('refreshTokenuser', refreshToken, {
             httpOnly: true,    // Prevents JavaScript access (XSS protection)
-            secure: false,     // Set to true in production (HTTPS)
-            sameSite: 'Lax',   // Protection against CSRF
+            secure: true,     // Set to true in production (HTTPS)
+            sameSite: 'None',   // Protection against CSRF
             maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days in milliseconds
         });
         console.log("refreshtokencreated")
@@ -127,8 +127,8 @@ const logoutController=async(req,res)=>{
         console.log("Reached before deletion")
         res.clearCookie('refreshTokenuser', {
             httpOnly: true,
-            secure: false, // true in production
-            sameSite: 'Lax'
+            secure: true, // true in production
+            sameSite: 'None'
         });
         res.status(200).json({ message: "Logged out successfully" });
         console.log("Reached after deletion")
